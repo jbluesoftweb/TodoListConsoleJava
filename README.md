@@ -2,7 +2,7 @@
 
 Aplicación de consola en Java para gestionar una lista de tareas (ToDo).
 
-Este repositorio está pensado para usarse únicamente con herramientas de consola (sin IDE). Todas las instrucciones mostradas son manuales y están orientadas a Windows Git Bash, aunque también incluyo alternativas multiplataforma.
+Este repositorio está pensado para usarse únicamente con herramientas de consola (sin IDE). Todas las instrucciones mostradas son manuales y están orientadas a Windows (Git Bash), aunque también incluyo alternativas multiplataforma.
 
 **Requisitos**:
 - Java JDK 21 o superior instalado (recomendado JDK 17+).
