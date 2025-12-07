@@ -1,0 +1,34 @@
+# Carpeta de salida compilada
+out/
+
+# Archivos JAR
+*.jar
+*.war
+*.ear
+
+# MANIFEST generado
+MANIFEST.MF
+
+# Archivos de clase compilados
+*.class
+
+# IDE y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+
+# Dependencias (si usas Maven o Gradle)
+target/
+build/
+.gradle/
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+sources.txt
