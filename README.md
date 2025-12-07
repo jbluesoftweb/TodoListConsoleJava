@@ -69,20 +69,38 @@ java -cp out paquete.Main
 ## Empaquetar en un JAR ejecutable
 
 1) Asegúrate de haber compilado las clases en `out/`.
-2) Empaqueta indicando la clase principal completa (`--main-class`):
+2) Crea el archivo `MANIFEST.MF` con la clase principal:
 
 ```powershell
-jar --create --file TodoConsole.jar --main-class=com.example.Main -C out .
+# PowerShell
+echo "Main-Class: app.Main" > MANIFEST.MF
 
-# Ejecutar el JAR
+# Bash/Git Bash
+echo 'Main-Class: app.Main' > MANIFEST.MF
+```
+
+3) Empaqueta el JAR usando el MANIFEST:
+
+```powershell
+jar cfm TodoConsole.jar MANIFEST.MF -C out .
+```
+
+4) Ejecuta el JAR:
+
+```powershell
 java -jar TodoConsole.jar
 ```
 
-Si tu versión de `jar` no soporta `--main-class`, puedes usar el descriptor `MANIFEST.MF` manualmente o la sintaxis compatible con versiones antiguas:
+**Nota**: Si usas paquetes diferentes (ej: `com.example.Main`), reemplaza `app.Main` con tu clase principal completa en el MANIFEST.
+
+---
+
+## Alternativa: Usando `--main-class` (Java 11+)
+
+Si tu versión de Java lo soporta:
 
 ```powershell
-echo Main-Class: com.example.Main > manifest.txt
-jar cfm TodoConsole.jar manifest.txt -C out .
+jar --create --file TodoConsole.jar --main-class=app.Main -C out .
 java -jar TodoConsole.jar
 ```
 
